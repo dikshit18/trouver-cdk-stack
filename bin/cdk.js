@@ -5,10 +5,14 @@ const { AdminStack } = require("../lib/admin-serverless-stack");
 const { WebSocketStack } = require("../lib/admin-websocket-stack");
 const { StaffServiceStack } = require("../lib/staff-serverless-stack");
 const { StaffWebSocketStack } = require("../lib/staff-websocket-stack");
+const { sharedPermissionStack } = require("../lib/shared-permission-stack");
+const { SharedOrderStack } = require("../lib/shared-order-stack");
 
 const app = new cdk.App();
 //new CdkStack(app, "CdkStack");
 //new AdminStack(app, "AdminStack");
 //new WebSocketStack(app, "WebSocketStack");
 //new StaffServiceStack(app, "StaffServiceStack");
-new StaffWebSocketStack(app, "StaffWebSocketStack");
+//new StaffWebSocketStack(app, "StaffWebSocketStack");
+//new sharedPermissionStack(app, "sharedPermissionStack");
+new SharedOrderStack(app, "SharedOrderStack");
